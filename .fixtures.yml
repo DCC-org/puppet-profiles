@@ -1,5 +1,6 @@
 fixtures:
   repositories:
     grafana: "git://github.com/voxpupuli/puppet-grafana.git"
+    stdlib: "git://github.com/puppetlabs/puppetlabs-stdlib.git"
   symlinks:
     profiles: "#{source_dir}"

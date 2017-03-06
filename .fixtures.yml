@@ -2,4 +2,4 @@ fixtures:
   repositories:
     grafana: "git://github.com/voxpupuli/puppet-grafana.git"
   symlinks:
-    zabbix: "#{source_dir}"
+    profiles: "#{source_dir}"

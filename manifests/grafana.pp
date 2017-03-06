@@ -8,7 +8,7 @@ class profiles::grafana {
     grafana_url      => 'http://localhost:3000',
     grafana_user     => 'admin',
     grafana_password => 'admin',
-    content          => template('path/to/exported/file.json'),
+    content          => template('grafana_dashboard.json'),
   }
 
   grafana_datasource{'influxdb':
@@ -22,6 +22,5 @@ class profiles::grafana {
     database         => 'ressources',
     access_mode      => 'proxy',
     is_default       => true,
-    json_data        => template('path/to/additional/config.json'),
   }
 }

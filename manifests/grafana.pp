@@ -1,14 +1,13 @@
 class profiles::grafana {
 
   class{'::grafana':
-    install_method => 'latest',
   }
 
   grafana_dashboard{'example_dashboard':
     grafana_url      => 'http://localhost:3000',
     grafana_user     => 'admin',
     grafana_password => 'admin',
-    content          => template('grafana_dashboard.json'),
+    content          => template('profiles/grafana_dashboard.json.erb'),
   }
 
   grafana_datasource{'influxdb':

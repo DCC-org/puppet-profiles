@@ -1,7 +1,7 @@
 {
   "name": "puppet-profiles",
   "version": "0.3.0",
-  "summary": "Installing and maintaining Zabbix. Will install server, proxy, java-gateway and agent on RedHat/Debian/Ubuntu (Incl. exported resources).",
+  "summary": "meta module which hold all profiles for the DCC thesis.",
   "author": "DCC",
   "dependencies": [
     {
@@ -24,51 +24,10 @@
   ],
   "operatingsystem_support": [
     {
-      "operatingsystem": "RedHat",
-      "operatingsystemrelease": [
-        "6.0",
-        "7.0"
-      ]
-    },
-    {
-      "operatingsystem": "Amazon",
-      "operatingsystemrelease": [
-        "6.0",
-        "7.0"
-      ]
-    },
-    {
-      "operatingsystem": "OracleLinux",
-      "operatingsystemrelease": [
-        "6.0",
-        "7.0"
-      ]
-    },
-    {
-      "operatingsystem": "Scientific",
-      "operatingsystemrelease": [
-        "6.0",
-        "7.0"
-      ]
-    },
-    {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
         "6.0",
         "7.0"
-      ]
-    },
-    {
-      "operatingsystem": "CloudLinux",
-      "operatingsystemrelease": [
-        "6.0",
-        "7.0"
-      ]
-    },
-    {
-      "operatingsystem": "XenServer",
-      "operatingsystemrelease": [
-        "6.0"
       ]
     },
     {
@@ -83,24 +42,6 @@
       "operatingsystemrelease": [
         "7.0",
         "8.0"
-      ]
-    },
-    {
-      "operatingsystem": "PSBM",
-      "operatingsystemrelease": [
-        "5.0"
-      ]
-    },
-    {
-      "operatingsystem": "PCS",
-      "operatingsystemrelease": [
-        "6.0"
-      ]
-    },
-    {
-      "operatingsystem": "Fedora",
-      "operatingsystemrelease": [
-        "24"
       ]
     },
     {

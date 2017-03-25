@@ -3,5 +3,12 @@ fixtures:
     grafana: "git://github.com/voxpupuli/puppet-grafana.git"
     stdlib: "git://github.com/puppetlabs/puppetlabs-stdlib.git"
     wget: "git://github.com/maestrodev/puppet-wget.git"
+    collectd: "git://github.com/voxpupuli/puppet-collectd.git"
+    archive: "git://github.com/voxpupuli/puppet-archive.git"
+    postgresql: "git://github.com/puppetlabs/puppetlabs-postgresql.git"
+    apt: "git://github.com/puppetlabs/puppetlabs-apt.git"
+    logstash:
+      repo: "git://github.com/bastelfreak/puppet-logstash.git"
+      branch: "archlinux"
   symlinks:
     profiles: "#{source_dir}"

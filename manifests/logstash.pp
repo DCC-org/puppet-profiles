@@ -13,7 +13,7 @@ class profiles::logstash (
   }
 
   # create the config
-  logstash::configfile{'logstash':
+  logstash::configfile{'logstash.conf':
     content => epp("${module_name}/logstash.conf.epp"),
   }
 

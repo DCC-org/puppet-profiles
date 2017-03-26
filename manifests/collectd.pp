@@ -5,7 +5,6 @@ class profiles::collectd (
     purge        => true,
     recurse      => true,
     purge_config => true,
-    manage_repo  => false,
     fqdnlookup   => false,
   }
   # connect to logstash

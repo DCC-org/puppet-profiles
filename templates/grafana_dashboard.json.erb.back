@@ -1,6 +1,6 @@
 {
   "id": 2,
-  "title": "$$$$CustomersName$$$$",
+  "title": "Dashboard",
   "tags": [],
   "style": "dark",
   "timezone": "browser",
@@ -29,7 +29,7 @@
             "thresholdLine": false
           },
           "hideTimeOverride": false,
-          "id": "$$$$panelID$$$$",
+          "id": 5,
           "isNew": true,
           "legend": {
             "alignAsTable": false,

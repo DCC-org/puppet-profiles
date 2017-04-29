@@ -1,36 +1,30 @@
 {
-  "id": 2,
-  "title": "$$$$CustomersName$$$$",
-  "tags": [],
-  "style": "dark",
-  "timezone": "browser",
+  "annotations": {
+    "list": []
+  },
   "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
   "hideControls": false,
-  "sharedCrosshair": false,
+  "id": 8,
+  "links": [],
+  "refresh": "5s",
   "rows": [
     {
       "collapse": false,
-      "editable": true,
       "height": "250px",
       "panels": [
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "InlfuxDB",
+          "datasource": "json",
           "decimals": null,
           "editable": true,
           "error": false,
           "fill": 0,
-          "grid": {
-            "threshold1": 0,
-            "threshold1Color": "rgba(216, 42, 27, 0)",
-            "threshold2": 0,
-            "threshold2Color": "rgba(0, 255, 17, 0)",
-            "thresholdLine": false
-          },
+          "grid": {},
           "hideTimeOverride": false,
-          "id": "$$$$panelID$$$$",
-          "isNew": true,
+          "id": 500,
           "legend": {
             "alignAsTable": false,
             "avg": false,
@@ -92,7 +86,9 @@
                   "operator": "=",
                   "value": "percent"
                 }
-              ]
+              ],
+              "target": "select metric",
+              "type": "timeserie"
             },
             {
               "alias": "CPU_idle",
@@ -131,7 +127,9 @@
                   "operator": "=",
                   "value": "percent"
                 }
-              ]
+              ],
+              "target": "select metric",
+              "type": "timeserie"
             },
             {
               "alias": "CPU_system",
@@ -170,7 +168,9 @@
                   "operator": "=",
                   "value": "percent"
                 }
-              ]
+              ],
+              "target": "select metric",
+              "type": "timeserie"
             },
             {
               "alias": "CPU_wait",
@@ -209,7 +209,9 @@
                   "operator": "=",
                   "value": "percent"
                 }
-              ]
+              ],
+              "target": "select metric",
+              "type": "timeserie"
             },
             {
               "alias": "CPU_nice",
@@ -248,7 +250,9 @@
                   "operator": "=",
                   "value": "percent"
                 }
-              ]
+              ],
+              "target": "select metric",
+              "type": "timeserie"
             },
             {
               "alias": "CPU_softirq",
@@ -287,7 +291,9 @@
                   "operator": "=",
                   "value": "percent"
                 }
-              ]
+              ],
+              "target": "select metric",
+              "type": "timeserie"
             },
             {
               "alias": "CPU_steal",
@@ -326,7 +332,9 @@
                   "operator": "=",
                   "value": "percent"
                 }
-              ]
+              ],
+              "target": "select metric",
+              "type": "timeserie"
             },
             {
               "alias": "CPU_interrupt",
@@ -365,7 +373,25 @@
                   "operator": "=",
                   "value": "percent"
                 }
-              ]
+              ],
+              "target": "select metric",
+              "type": "timeserie"
+            }
+          ],
+          "thresholds": [
+            {
+              "colorMode": "custom",
+              "fill": true,
+              "fillColor": "rgba(216, 42, 27, 0)",
+              "op": "gt",
+              "value": 0
+            },
+            {
+              "colorMode": "custom",
+              "fill": true,
+              "fillColor": "rgba(0, 255, 17, 0)",
+              "op": "gt",
+              "value": 0
             }
           ],
           "timeFrom": null,
@@ -380,7 +406,10 @@
           "transparent": true,
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -404,19 +433,13 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "InlfuxDB",
+          "datasource": "json",
           "editable": true,
           "error": false,
           "fill": 0,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "hideTimeOverride": false,
-          "id": 6,
-          "isNew": true,
+          "id": 9000000000000,
           "legend": {
             "alignAsTable": true,
             "avg": false,
@@ -470,7 +493,9 @@
                   "operator": "=",
                   "value": "load"
                 }
-              ]
+              ],
+              "target": "select metric",
+              "type": "timeserie"
             },
             {
               "alias": "Mid (10m)",
@@ -503,7 +528,9 @@
                   "operator": "=",
                   "value": "load"
                 }
-              ]
+              ],
+              "target": "select metric",
+              "type": "timeserie"
             },
             {
               "alias": "Long (15m)",
@@ -536,9 +563,12 @@
                   "operator": "=",
                   "value": "load"
                 }
-              ]
+              ],
+              "target": "select metric",
+              "type": "timeserie"
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "CPU Load",
@@ -551,7 +581,10 @@
           "transparent": true,
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -573,28 +606,26 @@
           ]
         }
       ],
-      "title": "New row"
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
     },
     {
       "collapse": false,
-      "editable": true,
       "height": "350px",
       "panels": [
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "InlfuxDB",
+          "datasource": "json",
           "editable": true,
           "error": false,
           "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
+          "grid": {},
           "id": 7,
-          "isNew": true,
           "legend": {
             "alignAsTable": true,
             "avg": false,
@@ -651,7 +682,9 @@
                   "operator": "=",
                   "value": "used"
                 }
-              ]
+              ],
+              "target": "select metric",
+              "type": "timeserie"
             },
             {
               "alias": "Buffered",
@@ -684,7 +717,9 @@
                   "operator": "=",
                   "value": "buffered"
                 }
-              ]
+              ],
+              "target": "select metric",
+              "type": "timeserie"
             },
             {
               "alias": "Chached",
@@ -717,7 +752,9 @@
                   "operator": "=",
                   "value": "cached"
                 }
-              ]
+              ],
+              "target": "select metric",
+              "type": "timeserie"
             },
             {
               "alias": "Free",
@@ -750,9 +787,12 @@
                   "operator": "=",
                   "value": "free"
                 }
-              ]
+              ],
+              "target": "select metric",
+              "type": "timeserie"
             }
           ],
+          "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
           "title": "Memory Usage",
@@ -765,7 +805,10 @@
           "transparent": true,
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
           },
           "yaxes": [
             {
@@ -787,9 +830,101 @@
           ]
         }
       ],
-      "title": "New row"
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "New row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "json",
+          "fill": 1,
+          "id": 9000000000001,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "select metric",
+              "type": "timeserie"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Timeframe",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
     }
   ],
+  "schemaVersion": 14,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
   "time": {
     "from": "now-30m",
     "to": "now"
@@ -819,15 +954,7 @@
       "30d"
     ]
   },
-  "templating": {
-    "list": []
-  },
-  "annotations": {
-    "list": []
-  },
-  "refresh": "5s",
-  "schemaVersion": 12,
-  "version": 8,
-  "links": [],
-  "gnetId": null
+  "timezone": "browser",
+  "title": "Hostname",
+  "version": 0
 }

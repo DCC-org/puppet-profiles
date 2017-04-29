@@ -1,11 +1,11 @@
 {
   "name": "puppet-profiles",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "summary": "meta module which hold all profiles for the DCC thesis.",
   "author": "DCC",
   "dependencies": [
     {
-      "name": "voxpupuli/grafana",
+      "name": "puppet/grafana",
       "version_requirement": ">= 2.6.3 < 3.0.0"
     },
     {

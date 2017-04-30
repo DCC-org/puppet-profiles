@@ -1,5 +1,5 @@
 class profiles::collectd (
- String $logstash_ip
+  String $logstash_ip
 ){
   class{'::collectd':
     purge        => true,
@@ -21,7 +21,7 @@ class profiles::collectd (
   }
 
   # collect disk stats
-  class { 'collectd::plugin::df':
+  class {'::collectd::plugin::df':
     fstypes          => ['nfs','tmpfs','autofs','gpfs','proc','devpts'],
     ignoreselected   => true,
     valuespercentage => true,

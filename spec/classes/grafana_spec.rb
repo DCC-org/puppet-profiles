@@ -12,7 +12,7 @@ describe 'profiles::grafana' do
       context 'with all defaults' do
         it { is_expected.to contain_class('profiles::grafana') }
         it { is_expected.to contain_grafana_dashboard('example_dashboard') }
-        it { is_expected.to contain_grafana_datasource('influxdb') }
+        it { is_expected.to contain_grafana_datasource('SimpleJson') }
         it { is_expected.to compile.with_all_deps }
       end
     end

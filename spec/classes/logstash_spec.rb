@@ -22,6 +22,9 @@ describe 'profiles::logstash' do
           }
         end
         it { is_expected.to compile.with_all_deps }
+        it { is_expected.to contain_archive('/usr/share/logstash/vendor/jar/jdbc/postgresql-42.0.0.jar') }
+        it { is_expected.to contain_logstash__configfile('logstash.conf') }
+        it { is_expected.to contain_logstash__plugin('logstash-output-jdbc') }
       end
     end
   end

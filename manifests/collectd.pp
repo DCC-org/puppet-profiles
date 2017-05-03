@@ -1,5 +1,5 @@
 class profiles::collectd (
-  String $logstash_ip
+  Stdlib::Compat::Ip_address $logstash_ip
 ){
   class{'::collectd':
     purge        => true,

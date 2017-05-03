@@ -1,51 +1,43 @@
 {
-  "id": 2,
-  "title": "Dashboard",
-  "tags": [],
-  "style": "dark",
-  "timezone": "browser",
+  "annotations": {
+    "list": []
+  },
   "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
   "hideControls": false,
-  "sharedCrosshair": false,
+  "id": 10,
+  "links": [],
   "rows": [
     {
       "collapse": false,
-      "editable": true,
       "height": "250px",
       "panels": [
         {
           "aliasColors": {},
-          "bars": false,
-          "datasource": "InlfuxDB",
-          "decimals": null,
-          "editable": true,
-          "error": false,
-          "fill": 0,
-          "grid": {
-            "threshold1": 0,
-            "threshold1Color": "rgba(216, 42, 27, 0)",
-            "threshold2": 0,
-            "threshold2Color": "rgba(0, 255, 17, 0)",
-            "thresholdLine": false
-          },
+          "bars": true,
+          "datasource": "SimpleJson",
+          "fill": 1,
           "hideTimeOverride": false,
-          "id": 5,
-          "isNew": true,
+          "id": 1,
           "legend": {
             "alignAsTable": false,
-            "avg": false,
+            "avg": true,
             "current": false,
+            "hideEmpty": false,
+            "hideZero": false,
             "max": false,
             "min": false,
             "rightSide": false,
             "show": true,
             "total": false,
-            "values": false
+            "values": true
           },
-          "lines": true,
-          "linewidth": 2,
+          "lines": false,
+          "linewidth": 1,
           "links": [],
-          "nullPointMode": "connected",
+          "minSpan": null,
+          "nullPointMode": "null",
           "percentage": false,
           "pointradius": 5,
           "points": false,
@@ -56,339 +48,72 @@
           "steppedLine": false,
           "targets": [
             {
-              "alias": "CPU_user",
-              "dsType": "influxdb",
-              "groupBy": [],
               "hide": false,
-              "measurement": "cpu_value",
-              "policy": "default",
               "refId": "A",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=",
-                  "value": "prototype1-marcellii"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type_instance",
-                  "operator": "=",
-                  "value": "user"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type",
-                  "operator": "=",
-                  "value": "percent"
-                }
-              ]
+              "target": "cpu_user",
+              "type": "timeserie"
             },
             {
-              "alias": "CPU_idle",
-              "dsType": "influxdb",
-              "groupBy": [],
-              "hide": true,
-              "measurement": "cpu_value",
-              "policy": "default",
               "refId": "B",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=",
-                  "value": "prototype1-marcellii"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type_instance",
-                  "operator": "=",
-                  "value": "idle"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type",
-                  "operator": "=",
-                  "value": "percent"
-                }
-              ]
+              "target": "cpu_interrupt",
+              "type": "timeserie"
             },
             {
-              "alias": "CPU_system",
-              "dsType": "influxdb",
-              "groupBy": [],
-              "hide": false,
-              "measurement": "cpu_value",
-              "policy": "default",
               "refId": "C",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=",
-                  "value": "prototype1-marcellii"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type_instance",
-                  "operator": "=",
-                  "value": "system"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type",
-                  "operator": "=",
-                  "value": "percent"
-                }
-              ]
+              "target": "cpu_steal",
+              "type": "timeserie"
             },
             {
-              "alias": "CPU_wait",
-              "dsType": "influxdb",
-              "groupBy": [],
-              "hide": false,
-              "measurement": "cpu_value",
-              "policy": "default",
               "refId": "D",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=",
-                  "value": "prototype1-marcellii"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type_instance",
-                  "operator": "=",
-                  "value": "wait"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type",
-                  "operator": "=",
-                  "value": "percent"
-                }
-              ]
+              "target": "cpu_idle",
+              "type": "timeserie"
             },
             {
-              "alias": "CPU_nice",
-              "dsType": "influxdb",
-              "groupBy": [],
-              "hide": false,
-              "measurement": "cpu_value",
-              "policy": "default",
               "refId": "E",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=",
-                  "value": "prototype1-marcellii"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type_instance",
-                  "operator": "=",
-                  "value": "nice"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type",
-                  "operator": "=",
-                  "value": "percent"
-                }
-              ]
+              "target": "cpu_nice",
+              "type": "timeserie"
             },
             {
-              "alias": "CPU_softirq",
-              "dsType": "influxdb",
-              "groupBy": [],
-              "hide": false,
-              "measurement": "cpu_value",
-              "policy": "default",
               "refId": "F",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=",
-                  "value": "prototype1-marcellii"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type_instance",
-                  "operator": "=",
-                  "value": "softirq"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type",
-                  "operator": "=",
-                  "value": "percent"
-                }
-              ]
+              "target": "cpu_system",
+              "type": "timeserie"
             },
             {
-              "alias": "CPU_steal",
-              "dsType": "influxdb",
-              "groupBy": [],
-              "hide": false,
-              "measurement": "cpu_value",
-              "policy": "default",
               "refId": "G",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=",
-                  "value": "prototype1-marcellii"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type_instance",
-                  "operator": "=",
-                  "value": "steal"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type",
-                  "operator": "=",
-                  "value": "percent"
-                }
-              ]
+              "target": "cpu_softirq",
+              "type": "timeserie"
             },
             {
-              "alias": "CPU_interrupt",
-              "dsType": "influxdb",
-              "groupBy": [],
-              "hide": false,
-              "measurement": "cpu_value",
-              "policy": "default",
               "refId": "H",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=",
-                  "value": "prototype1-marcellii"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type_instance",
-                  "operator": "=",
-                  "value": "interrupt"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type",
-                  "operator": "=",
-                  "value": "percent"
-                }
-              ]
+              "target": "cpu_wait",
+              "type": "timeserie"
             }
           ],
-          "timeFrom": null,
+          "thresholds": [],
+          "timeFrom": "1h",
           "timeShift": null,
-          "title": "Detailed CPU Usage",
+          "title": "Detailed CPU",
           "tooltip": {
-            "msResolution": true,
             "shared": false,
             "sort": 0,
-            "value_type": "cumulative"
+            "value_type": "individual"
           },
-          "transparent": true,
           "type": "graph",
           "xaxis": {
-            "show": true
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": [
+              "total"
+            ]
           },
           "yaxes": [
             {
-              "format": "percent",
-              "label": "",
+              "format": "none",
+              "label": null,
               "logBase": 1,
-              "max": 100,
-              "min": 0,
+              "max": null,
+              "min": null,
               "show": true
             },
             {
@@ -404,19 +129,218 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "InlfuxDB",
-          "editable": true,
-          "error": false,
-          "fill": 0,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          "datasource": "SimpleJson",
+          "fill": 1,
+          "id": 2,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": true,
+            "values": true
           },
-          "hideTimeOverride": false,
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "df_free",
+              "type": "timeserie"
+            },
+            {
+              "refId": "B",
+              "target": "df_reserved",
+              "type": "timeserie"
+            },
+            {
+              "refId": "C",
+              "target": "df_used",
+              "type": "timeserie"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": "1h",
+          "timeShift": null,
+          "title": "Memory",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": false
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": true,
+          "datasource": "SimpleJson",
+          "description": "Used CPU, Memory and Storage from a defined Timeframe",
+          "fill": 1,
+          "id": 3,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": false,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": false,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "select metric",
+              "type": "timeserie"
+            },
+            {
+              "refId": "B",
+              "target": "select metric",
+              "type": "timeserie"
+            },
+            {
+              "refId": "C",
+              "target": "select metric",
+              "type": "timeserie"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Timeframe",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": false
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 291,
+      "panels": [
+        {
+          "headings": false,
+          "id": 4,
+          "limit": 10,
+          "links": [],
+          "query": "",
+          "recent": false,
+          "search": false,
+          "span": 2,
+          "starred": true,
+          "tags": [],
+          "title": "Instances",
+          "type": "dashlist"
+        },
+        {
+          "content": "DCC\n===================\n\nHostname: ci.virtapi.org  \nCPU: Intel Xenon E8231 (16x 3,963Ghz)  \nMemory: 2 TB DD4 1066Mhz  \nSpace: Seagate Momentus XT (1PB)  \n\n----------",
+          "description": "Server overview",
           "id": 6,
-          "isNew": true,
+          "links": [],
+          "mode": "markdown",
+          "span": 3,
+          "title": "Instance",
+          "type": "text"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "SimpleJson",
+          "fill": 1,
+          "id": 5,
           "legend": {
             "alignAsTable": true,
             "avg": false,
@@ -428,348 +352,68 @@
             "values": true
           },
           "lines": true,
-          "linewidth": 2,
+          "linewidth": 1,
           "links": [],
-          "nullPointMode": "connected",
+          "nullPointMode": "null",
           "percentage": false,
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "span": 6,
+          "span": 7,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "alias": "Short (1m)",
-              "dsType": "influxdb",
-              "groupBy": [],
-              "measurement": "load_shortterm",
-              "policy": "default",
               "refId": "A",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=",
-                  "value": "prototype1-marcellii"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type",
-                  "operator": "=",
-                  "value": "load"
-                }
-              ]
+              "target": "cpu_user",
+              "type": "timeserie"
             },
             {
-              "alias": "Mid (10m)",
-              "dsType": "influxdb",
-              "groupBy": [],
-              "hide": false,
-              "measurement": "load_midterm",
-              "policy": "default",
               "refId": "B",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=",
-                  "value": "prototype1-marcellii"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type",
-                  "operator": "=",
-                  "value": "load"
-                }
-              ]
+              "target": "cpu_idle",
+              "type": "timeserie"
             },
             {
-              "alias": "Long (15m)",
-              "dsType": "influxdb",
-              "groupBy": [],
-              "hide": false,
-              "measurement": "load_longterm",
-              "policy": "default",
               "refId": "C",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=",
-                  "value": "prototype1-marcellii"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type",
-                  "operator": "=",
-                  "value": "load"
-                }
-              ]
+              "target": "cpu_steal",
+              "type": "timeserie"
+            }
+          ],
+          "thresholds": [
+            {
+              "colorMode": "warning",
+              "fill": false,
+              "line": true,
+              "op": "gt",
+              "value": 200
+            },
+            {
+              "colorMode": "critical",
+              "fill": false,
+              "line": true,
+              "op": "gt",
+              "value": 300
             }
           ],
           "timeFrom": null,
           "timeShift": null,
-          "title": "CPU Load",
+          "title": "SSD write endurance",
           "tooltip": {
-            "msResolution": true,
             "shared": true,
             "sort": 0,
-            "value_type": "cumulative"
+            "value_type": "individual"
           },
-          "transparent": true,
           "type": "graph",
           "xaxis": {
-            "show": true
-          },
-          "yaxes": [
-            {
-              "format": "none",
-              "label": "Load",
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": false
-            }
-          ]
-        }
-      ],
-      "title": "New row"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "350px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": "InlfuxDB",
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 7,
-          "isNew": true,
-          "legend": {
-            "alignAsTable": true,
-            "avg": false,
-            "current": true,
-            "hideEmpty": false,
-            "hideZero": false,
-            "max": true,
-            "min": true,
+            "mode": "time",
+            "name": null,
             "show": true,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": true,
-          "steppedLine": false,
-          "targets": [
-            {
-              "alias": "In Used",
-              "dsType": "influxdb",
-              "groupBy": [],
-              "hide": false,
-              "measurement": "memory_value",
-              "policy": "default",
-              "refId": "A",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=",
-                  "value": "prototype1-marcellii"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type_instance",
-                  "operator": "=",
-                  "value": "used"
-                }
-              ]
-            },
-            {
-              "alias": "Buffered",
-              "dsType": "influxdb",
-              "groupBy": [],
-              "hide": false,
-              "measurement": "memory_value",
-              "policy": "default",
-              "refId": "D",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=",
-                  "value": "prototype1-marcellii"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type_instance",
-                  "operator": "=",
-                  "value": "buffered"
-                }
-              ]
-            },
-            {
-              "alias": "Chached",
-              "dsType": "influxdb",
-              "groupBy": [],
-              "hide": false,
-              "measurement": "memory_value",
-              "policy": "default",
-              "refId": "C",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=",
-                  "value": "prototype1-marcellii"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type_instance",
-                  "operator": "=",
-                  "value": "cached"
-                }
-              ]
-            },
-            {
-              "alias": "Free",
-              "dsType": "influxdb",
-              "groupBy": [],
-              "hide": false,
-              "measurement": "memory_value",
-              "policy": "default",
-              "refId": "B",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=",
-                  "value": "prototype1-marcellii"
-                },
-                {
-                  "condition": "AND",
-                  "key": "type_instance",
-                  "operator": "=",
-                  "value": "free"
-                }
-              ]
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Memory Usage",
-          "tooltip": {
-            "msResolution": true,
-            "shared": true,
-            "sort": 0,
-            "value_type": "cumulative"
-          },
-          "transparent": true,
-          "type": "graph",
-          "xaxis": {
-            "show": true
+            "values": []
           },
           "yaxes": [
             {
-              "format": "bytes",
+              "format": "short",
               "label": null,
               "logBase": 1,
               "max": null,
@@ -787,11 +431,22 @@
           ]
         }
       ],
-      "title": "New row"
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
     }
   ],
+  "schemaVersion": 14,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
   "time": {
-    "from": "now-30m",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {
@@ -819,15 +474,7 @@
       "30d"
     ]
   },
-  "templating": {
-    "list": []
-  },
-  "annotations": {
-    "list": []
-  },
-  "refresh": "5s",
-  "schemaVersion": 12,
-  "version": 8,
-  "links": [],
-  "gnetId": null
+  "timezone": "browser",
+  "title": "$$$CustomersName$$$",
+  "version": 6
 }

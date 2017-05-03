@@ -10,16 +10,15 @@ class profiles::grafana {
     content          => template('profiles/grafana_dashboard.json.erb'),
   }
 
-  grafana_datasource{'influxdb':
+  grafana::plugin{'grafana-simple-json-datasource':}
+
+  grafana_datasource{'SimpleJson':
     grafana_url      => 'http://localhost:3000',
     grafana_user     => 'admin',
     grafana_password => 'admin',
-    type             => 'influxdb',
-    url              => 'http://localhost:8086',
-    user             => 'admin',
-    password         => 'test123',
-    database         => 'ressources',
+    type             => 'grafana-simple-json-datasource',
+    url              => 'http://swoarly.de:8080',
     access_mode      => 'proxy',
-    is_default       => true,
+    is_default       => false,
   }
 }

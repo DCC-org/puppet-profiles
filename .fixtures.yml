@@ -2,6 +2,8 @@ fixtures:
   repositories:
     grafana: "git://github.com/voxpupuli/puppet-grafana.git"
     stdlib: "git://github.com/puppetlabs/puppetlabs-stdlib.git"
+    concat: "git://github.com/puppetlabs/puppetlabs-concat.git"
+    epel: 'git://github.com/stahnma/puppet-module-epel'
     wget: "git://github.com/maestrodev/puppet-wget.git"
     collectd: "git://github.com/voxpupuli/puppet-collectd.git"
     archive: "git://github.com/voxpupuli/puppet-archive.git"

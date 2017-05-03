@@ -14,7 +14,6 @@ describe 'profiles::collectd' do
       end
 
       context 'with working params' do
-
         let :facts do
           needed_facts = { collectd_version: '5.5.0', python_dir: '/usr/local/lib/python2.7/dist-packages' }
           facts.merge(needed_facts)
@@ -30,7 +29,7 @@ describe 'profiles::collectd' do
         it { is_expected.to contain_class('collectd::plugin::df') }
         it { is_expected.to contain_class('collectd::plugin::cpufreq') }
         it { is_expected.to contain_class('collectd::plugin::conntrack') }
-        it { is_expected.to contain_collectd__plugin__network__server('123.123.123.123')}
+        it { is_expected.to contain_collectd__plugin__network__server('123.123.123.123') }
       end
     end
   end

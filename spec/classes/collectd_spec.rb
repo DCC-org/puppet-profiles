@@ -4,11 +4,13 @@ describe 'profiles::collectd' do
   let :node do
     'agent.example.com'
   end
+
   on_supported_os.each do |os, facts|
     context "on #{os} " do
       let :facts do
         facts
       end
+
       context 'with all defaults' do
         it { is_expected.not_to compile.with_all_deps }
       end
@@ -23,6 +25,7 @@ describe 'profiles::collectd' do
             logstash_ip: '123.123.123.123'
           }
         end
+
         it { is_expected.to compile.with_all_deps }
         it { is_expected.to contain_class('collectd') }
         it { is_expected.to contain_class('collectd::plugin::cpu') }
